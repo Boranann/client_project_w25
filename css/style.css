@@ -1,0 +1,158 @@
+nav {
+     background-color: rgb(0, 39, 76);
+     padding: 20px 0px 10px 0px;
+     text-align: left;
+}
+
+nav ul {
+     margin: 0;
+     padding: 0;
+     display: inline-block;
+}
+
+nav li {
+     display: inline;
+}
+
+nav a {
+     color: rgb(255, 203, 5);
+     font-weight: bold;
+     text-decoration: none;
+     padding: 0px 5px 0px 5px;
+     margin-left:5px;
+}
+
+nav a:hover {
+     text-decoration: underline;
+}
+
+nav a:focus {
+     border: 2px solid rgb(255, 203, 5);
+}
+
+nav img {
+     width: 36px;
+     height: auto;
+     position: absolute;
+     right: 10px;
+     top: 10px;
+}
+
+.skip a {
+     color: rgb(255, 203, 5);
+     background-color: rgb(0, 39, 76);
+     position: absolute;
+     top: -40px;
+}
+
+.skip a:focus {
+     top: 20px;
+}
+
+:focus {
+     border: 2px solid;
+}
+
+h1 {
+     font-size: 30px;
+     font-weight: bold;
+     text-decoration: underline;
+     text-decoration-color: rgb(255, 203, 5);
+     margin: 20px;
+}
+
+h2 {
+     font-size: 25px;
+     margin-bottom:10px;
+}
+
+h3 {
+     font-size: 18px;
+}
+
+h1,
+h2,
+h3 {
+     color: rgb(0, 39, 76);
+}
+
+h2 a{
+     font-size: 18px;
+}
+
+p {
+     margin-bottom: 10px;
+}
+
+img {
+     width: 100%;
+     height: auto;
+     border-radius: 5px;
+}
+
+figcaption{
+     margin-bottom: 5px;
+     font-style: italic;
+     font-size: 13px;
+}
+
+section a{
+     text-decoration: none;
+     color: rgb(0, 39, 76);
+     font-weight: bold;
+}
+
+section a:hover,section a:focus {
+     border: dashed 2px rgb(255, 203, 5);
+}
+
+section {
+     padding: 10px 20px;
+     border-radius: 5px;
+}
+
+section li {
+     margin-left: 15px;
+}
+
+footer{
+     background-color: rgb(0, 39, 76);
+     color: rgb(255, 203, 5);
+     padding: 20px;
+     margin-top: 10px;
+}
+
+footer a{
+     color: rgb(255, 203, 5);
+     text-decoration: none;
+}
+
+footer a:hover, footer a:focus {
+     text-decoration: underline;
+}
+
+footer>img {
+     width: 36px;
+     height: auto;
+     position: relative;
+}
+
+.event{
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.event h3, .event2 h3{
+     font-size: 16px;
+     margin-bottom: 5px;
+}
+
+.event p, .event2 p{
+     font-size: 14px;
+     margin-bottom: 0px;
+}
+
+.event2{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+}
