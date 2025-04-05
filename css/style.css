@@ -1,17 +1,21 @@
 nav {
      background-color: rgb(0, 39, 76);
-     padding: 20px 0px 10px 0px;
-     text-align: left;
+     padding: 20px 0px 15px 0px;
+     position:fixed;
+     width: 100%;
+     top:0;
 }
 
 nav ul {
      margin: 0;
      padding: 0;
-     display: inline-block;
 }
 
-nav li {
-     display: inline;
+.navList {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     margin-left: 10px;
 }
 
 nav a {
@@ -19,7 +23,7 @@ nav a {
      font-weight: bold;
      text-decoration: none;
      padding: 0px 5px 0px 5px;
-     margin-left:5px;
+     font-size: 1em;
 }
 
 nav a:hover {
@@ -27,6 +31,10 @@ nav a:hover {
 }
 
 nav a:focus {
+     border: 2px solid rgb(255, 203, 5);
+}
+
+.active {
      border: 2px solid rgb(255, 203, 5);
 }
 
@@ -38,6 +46,17 @@ nav img {
      top: 10px;
 }
 
+nav button {
+     position: absolute;
+     right: 80px;
+     top: 18px;
+     padding: 5px;
+     background-color: rgb(255, 203, 5);
+     color: rgb(0, 39, 76);
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: bold;
+}
+
 .skip a {
      color: rgb(255, 203, 5);
      background-color: rgb(0, 39, 76);
@@ -47,6 +66,7 @@ nav img {
 
 .skip a:focus {
      top: 20px;
+     z-index: 1000;
 }
 
 :focus {
@@ -54,29 +74,30 @@ nav img {
 }
 
 h1 {
+     color: rgb(255, 203, 5);
+     background-color: rgb(0, 39, 76);
      font-size: 30px;
+     padding: 13px;
      font-weight: bold;
-     text-decoration: underline;
-     text-decoration-color: rgb(255, 203, 5);
      margin: 20px;
+     margin-top: 70px;
 }
 
 h2 {
      font-size: 25px;
-     margin-bottom:10px;
+     margin-bottom: 10px;
 }
 
 h3 {
      font-size: 18px;
 }
 
-h1,
 h2,
 h3 {
      color: rgb(0, 39, 76);
 }
 
-h2 a{
+h2 a {
      font-size: 18px;
 }
 
@@ -90,20 +111,24 @@ img {
      border-radius: 5px;
 }
 
-figcaption{
+figcaption {
      margin-bottom: 5px;
      font-style: italic;
      font-size: 13px;
 }
 
-section a{
+section a {
      text-decoration: none;
      color: rgb(0, 39, 76);
      font-weight: bold;
+     border-bottom: 2px solid rgb(0, 39, 76);
 }
 
-section a:hover,section a:focus {
-     border: dashed 2px rgb(255, 203, 5);
+section a:hover,
+section a:focus {
+     /* border: dashed 2px rgb(255, 203, 5); */
+     color: rgb(255, 203, 5);
+     background-color: rgb(0, 39, 76);
 }
 
 section {
@@ -113,21 +138,27 @@ section {
 
 section li {
      margin-left: 15px;
+     margin-bottom: 5px;
 }
 
-footer{
+h3 {
+     margin-bottom: 5px;
+}
+
+footer {
      background-color: rgb(0, 39, 76);
      color: rgb(255, 203, 5);
      padding: 20px;
      margin-top: 10px;
 }
 
-footer a{
+footer a {
      color: rgb(255, 203, 5);
      text-decoration: none;
 }
 
-footer a:hover, footer a:focus {
+footer a:hover,
+footer a:focus {
      text-decoration: underline;
 }
 
@@ -137,22 +168,96 @@ footer>img {
      position: relative;
 }
 
-.event{
+.event {
      display: grid;
      grid-template-columns: 1fr 1fr 1fr;
 }
 
-.event h3, .event2 h3{
+.event h3,
+.event2 h3 {
      font-size: 16px;
      margin-bottom: 5px;
 }
 
-.event p, .event2 p{
+.event p,
+.event2 p {
      font-size: 14px;
      margin-bottom: 0px;
 }
 
-.event2{
+.event2 {
      display: grid;
      grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (min-width: 700px) {
+     nav {
+          border-bottom: 2px solid rgb(255, 203, 5);
+     }
+
+     h1 {
+          border: 2px solid rgb(0, 39, 76);
+          background-color: rgb(255, 203, 5);
+          color: rgb(0, 39, 76);
+          border-radius: 5px;
+     }
+
+     body {
+          background-color: rgb(0, 39, 76);
+     }
+
+     nav a {
+          font-size: 1.2em;
+     }
+
+     .navList {
+          gap: 50px;
+     }
+
+     .container {
+          display: grid;
+          grid-template-columns: 50px 1fr 1fr 1fr 50px;
+     }
+
+     .container section {
+          margin: 10px;
+          padding: 15px;
+          border-radius: 5px;
+          background-color: rgb(255, 203, 5);
+          ;
+          box-shadow: 0 2px 5px rgb(0, 39, 76);
+          border: 2px solid rgb(0, 39, 76);
+     }
+
+     .container section:nth-child(odd) {
+          grid-column: 2 / span 2;
+
+
+     }
+
+     .container section:nth-child(even) {
+          grid-column: 3 / span 2;
+     }
+
+     .food section:last-child{
+          grid-column: 1 / span 5;
+     }
+
+     .event,
+     .event2 {
+          grid-template-columns: 1fr;
+          margin: 0;
+          padding: 0;
+     }
+
+     .pictures {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 10px;
+          margin-top: 20px;
+     }
+
+     footer {
+          border-top: 2px solid rgb(255, 203, 5);
+     }
 }
