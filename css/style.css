@@ -49,7 +49,7 @@ nav img {
 nav button {
      position: absolute;
      right: 80px;
-     top: 18px;
+     top: -40px;
      padding: 5px;
      background-color: rgb(255, 203, 5);
      color: rgb(0, 39, 76);
@@ -193,6 +193,16 @@ footer>img {
 @media screen and (min-width: 700px) {
      nav {
           border-bottom: 2px solid rgb(255, 203, 5);
+     }
+     nav button {
+          position: absolute;
+          right: 80px;
+          top: 18px;
+          padding: 5px;
+          background-color: rgb(255, 203, 5);
+          color: rgb(0, 39, 76);
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: bold;
      }
 
      h1 {
